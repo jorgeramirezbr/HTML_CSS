@@ -68,9 +68,30 @@
         .pie{
             background: #FFB84C;
         }
-        @media (max-width: 1024px){
-            .section{
-                background: #F9D949;
-                flex-direction: column;
-            }
+@media (max-width: 1024px){
+    .section{
+        background: #F9D949;
+        flex-direction: column;
+    }
+}
+@media (max-width: 480px){
+    .menu{
+        display: block;
+    }
+    .articulos{
+        flex-direction: column;
+        background: #2E4F4F;
+    }
+        .article{
+            background: #0E8388;
         }
+        .navegacion{
+            background: #CBE4DE;
+        }
+    .aside{
+        background: #FF7B54;
+    }
+        .publicidad{
+            background: #FFB26B;
+        }
+}
