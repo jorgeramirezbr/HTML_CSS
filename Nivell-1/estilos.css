@@ -68,3 +68,9 @@
         .pie{
             background: #FFB84C;
         }
+        @media (max-width: 1024px){
+            .section{
+                background: #F9D949;
+                flex-direction: column;
+            }
+        }
