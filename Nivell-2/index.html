@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML- CSS Nivel 2</title>
+    <script src="https://kit.fontawesome.com/fefd2d0460.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@500&family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">    
+</head>
+<body>
+    <div class="padre">
+        <header class="header">
+            <div class="menu">
+                <div class="logo">
+                    <img src="imagenes/logo.png" alt="Logo">
+                </div>
+                <nav class="nav">
+                    <button onclick="accion()">Menú</button>
+                    <a href="#" class="nav-enlace desaparece"><i class="fa-solid fa-house-chimney"></i>Inicio</a>
+                    <a href="#" class="nav-enlace desaparece"><i class="fa-solid fa-map-location-dot"></i>Rutas</a>
+                    <a href="#" class="nav-enlace desaparece"><i class="fa-solid fa-square-h"></i>Hoteles</a>
+                    <a href="#" class="nav-enlace desaparece"><i class="fa-solid fa-plane"></i>Vuelos</a>
+                    <a href="#" class="nav-enlace desaparece"><i class="fa-solid fa-envelope-open-text"></i>Contacto</a>
+                </nav>
+                <div class="social">
+                    <div><a href="#"><i class="fa-brands fa-square-facebook"></i></a></div>
+                    <div><a href="#"><i class="fa-brands fa-twitter"></i></a></div>
+                </div>
+            </div>
+            <div class="texto-principal">
+                <h1>"Disfruta de la experiencia de otros viajeros"</h1>
+            </div>
+        </header>
+        <section class="section">
+            <div class="articulos">
+                <article class="article"></article>
+                <article class="article"></article>
+                <article class="article"></article>
+                <article class="article"></article>
+                <nav class="navegacion"></nav>
+            </div>
+            <aside class="aside">
+                <div class="publicidad"></div>
+                <div class="publicidad"></div>
+            </aside>
+        </section>
+        <footer class="footer">
+            <nav class="pie"></nav>
+        </footer>
+    </div>
+    <script>
+        function accion(){
+            console.log('funcionando el boton');
+            var ancla = document.getElementsByClassName('nav-enlace');
+            for(var i = 0; i < ancla.length; i++){
+                ancla[i].classList.toggle('desaparece')
+            }
+        }
+    </script>
+</body>
+</html>
