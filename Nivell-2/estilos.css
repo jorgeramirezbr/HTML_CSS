@@ -13,6 +13,12 @@ a{
 a:hover{
     color:#f73f52;
 }
+article img {
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
+    padding-bottom: 0px;
+}
 .padre{
     display: flex;
     flex-flow: column nowrap;
@@ -65,7 +71,7 @@ a:hover{
             height: 32%;
             align-self: center;
         }
-            h1{
+            .texto-principal h1{
                 color: rgba(229, 88, 7, 0.5);
                 font-family: 'Libre Baskerville', serif;
                 text-align: center;
@@ -74,46 +80,101 @@ a:hover{
                 margin-top:1rem;
             }
     .section{
-        background: #000;
+        background: #fff;
         display: flex;
+        padding: 10px 0px;
     }
         .articulos{
-            background: #5C469C;
-            flex: 2 1 auto;
+            background: rgb(216, 215, 215);
+            flex: 2 1 77%;
             display: flex;
             flex-flow: row wrap;
+            margin-right: 10px;            
         }
             .article{
-                background: #1D267D;
+                background: rgb(246, 242, 242);
                 flex: 1 1 40%;
+                margin: 7px;
+                position: relative;
+                height: 500px;
             }
-            .navegacion{
-                background: #009FBD;
+                .fecha{
+                    position: absolute;
+                    top: 34%;
+                    padding: 10px;
+                    color: rgba(255, 229, 105, 0.7);
+                    font-weight: 100;
+                }
+                .titulo-art{
+                    background: rgb(250, 133, 133);
+                    color: #fff;
+                    margin: 0px 5px;
+                }
+                .article p{
+                    column-count: 2;
+                    margin: 0px 5px;
+                    line-height: 1.1;
+                    color: rgb(119, 117, 117);
+                    padding-top: 20px;
+                    letter-spacing: -1px;
+                }
+                .article a{
+                    position: absolute;
+                    bottom: 0px;
+                    padding-left: 10px;
+                }
+            .parrafo-art{
+                background: rgb(216, 215, 215);
                 flex: 1 1 100%;
+                text-align:center;
+                letter-spacing: -1px;
             }
         .aside{
-            background: #f73f52;
-            flex: 1 1 auto;
+            background: rgb(216, 215, 215);
+            flex: 1 1 23%;
+            padding-top: 18px;
         }
             .publicidad{
-                background: #FFE569;
+                text-align: center;
+                font-size: 17px;
+                line-height: 1.2;
+                letter-spacing: -1px;
             }
     .footer{
-        background: #000;
+        background: rgb(216, 215, 215);
+        padding: 0px 10px;
     }
         .pie{
-            background: #FFB84C;
+            background: rgb(246, 242, 242);
+            text-align: center;
+            height: 100%;
+            letter-spacing: -1px;
+            color: rgb(119, 117, 117);
         }
 @media (max-width: 1024px){
     .section{
-        background: #F9D949;
         flex-direction: column;
+    }
+    .articulos{
+        margin-right: 0px;
+    }
+    .aside{
+        margin-top: 10px;
+    }
+}
+@media (max-width: 767px){
+    .article p{
+        line-height: 1;
+        padding-top: 10px;
     }
 }
 @media (max-width: 480px){
-    a{
+    .header a{
         background: #e6d9d9;
         color: #ff7854;
+    }
+    .header a:hover{
+        color: #f73f52;
     }
     .menu{
         display: flex;
@@ -133,19 +194,6 @@ a:hover{
         font-weight: 700;
     }      
     .articulos{
-        flex-direction: column;
-        background: #2E4F4F;
+        flex-direction: column;        
     }
-        .article{
-            background: #0E8388;
-        }
-        .navegacion{
-            background: #CBE4DE;
-        }
-    .aside{
-        background: #FF7B54;
-    }
-        .publicidad{
-            background: #FFB26B;
-        }
 }
